@@ -1,1 +1,33 @@
+## What are counters?
+Counters are sequential logic circuits that, in digital electronics, are used to count the number of times an event or instance takes place.
+A counter is made by cascading a series of flip-flops. As we know, flip-flops have a clock input. Depending on the type of clock input, counters are of two types
+Asynchronous or ripple counters.
+Synchronous counters.
+Since counters kind of depend on clocks like all sequential circuits, to understand their working, we will consider every clock cycle. Meaning, there will be changes in the states of some flip flops at every clock interval. We will try to understand the working in each clock cycle.
 
+## What is a Mod n counter?
+Mod n or Modulus of n, is a way of referring to the maximum count of a counter. Every counter has a limit with regards to the number they can count up or down to. Mod n expresses that limit.
+It is an important label for a counter because it gives us the maximum count of the counter, as well as the number of flip-flops present in the counter.
+
+A mod n counter can count up to n events. We can mathematically represent a mod n counter as
+n = modulus/maximum event count of the counter. This is the number of states that the counter has.
+
+N = Number of flip-flops connected in cascade
+
+{ 2 }^{ N }– 1 = Maximum decimal count it can reach. Because binary numbers start counting from 0, so for a counter that can count up to 4 events, its decimal equivalent will be 3 only (0,1,2,3).
+Example: Mod 8 counter
+
+Mod 8 means n = 8. From the equation above
+
+8 = { 2 }^{ N }
+Thus, N = 3.
+
+Which means that this is a counter with three flip-flops, which means three bits, having eight stable states (000 to 111) and capable of counting eight events or up to the decimal number { 2 }^{ N }– 1 = 7.
+
+## What is a synchronous counter?
+In a synchronous counter, all the flip-flops are synchronized to the same clock input. This means that for every clock pulse, all the flip-flops will generate an output. Since the clocking is done in a parallel manner, synchronous counters are also known as parallel counters/simultaneous counters.
+
+We can use JK flip-flop, D flip-flop or T flip-flops to make synchronous counters. In this post, we will be using the D flip-flop to design our counters. The methodology for designing the counters with other flip-flops varies with the type of flip-flops.
+
+What are up counters, down counters and up-down counters?
+Well as their names imply, up counters count upwards or incrementally. Down counters count downwards or in a decremental manner. Up-down counters can count both upwards as well as downwards.
